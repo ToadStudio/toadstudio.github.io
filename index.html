@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<title>Diffie-Hellman</title>
+	<style type="text/css">
+	title, style
+	{
+		display: none;
+	}
+	*
+	{
+		box-sizing: border-box;
+		display: block;
+	}
+	.titxt
+	{
+		font-size: 3.5rem;
+		font-weight: 300;
+		line-height: 1.2;
+		font-family: inherit;
+		margin-bottom: .5rem;
+		margin-top: 9rem;
+		text-align: center;
+	}
+	.container
+	{
+		margin-top: 7rem;
+	}
+	.btn
+	{
+		font-family: "微软雅黑";
+		letter-spacing: 1px;
+	}
+	.spe
+	{
+		color: #007bff !important;
+	}
+	.spe:hover
+	{
+		color: #ffffff !important;
+	}
+	.spec
+	{
+		color: #fff !important;
+	}
+	.cpr
+	{
+		color: #999;
+		margin-top: 15rem;
+		font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+	<h1 class="titxt">Diffie-Hellman</h1>
+	<div class="container">
+		<div class="card-deck mb-3 text-center">
+			<div class="card mb-4 box-shadow">
+				<div class="card-header">
+					<h4 class="my-0 font-weight-normal">密钥生成</h4>
+				</div>
+				<div class="card-body">
+					<ul class="list-unstyled mt-3 mb-4">
+						<li>生成一个私钥与公钥</li>
+						<li>随机一组超大素数与整数</li>
+						<li>计算对方传来的私钥与公钥</li>
+						<li>得到通讯密钥</li>
+					</ul>
+					<a class="btn btn-lg btn-block btn-outline-primary spe">开始生成密钥</a>
+				</div>
+			</div>
+			<div class="card mb-4 box-shadow">
+				<div class="card-header">
+					<h4 class="my-0 font-weight-normal">加密</h4>
+				</div>
+				<div class="card-body">
+					<ul class="list-unstyled mt-3 mb-4">
+						<li>使用通讯密钥</li>
+						<li>采用SHA256加密算法</li>
+						<li>输入待加密信息</li>
+						<li>得到密文</li>
+					</ul>
+					<a class="btn btn-lg btn-block btn-primary spec">进行加密操作</a>
+				</div>
+			</div>
+			<div class="card mb-4 box-shadow">
+				<div class="card-header">
+					<h4 class="my-0 font-weight-normal">解密</h4>
+				</div>
+				<div class="card-body">
+					<ul class="list-unstyled mt-3 mb-4">
+						<li>使用通讯密钥</li>
+						<li>采用SHA256加密算法</li>
+						<li>输入密文</li>
+						<li>得到解密的信息</li>
+					</ul>
+					<a class="btn btn-lg btn-block btn-primary spec">进行解密操作</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p class="cpr">&copy; Copyright ZZH (2018). All rights reserved.</p>
+</body>
+</html>
