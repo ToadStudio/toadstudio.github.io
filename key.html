@@ -14,7 +14,7 @@
 			font-family: "微软雅黑 Light", "微软雅黑", "龙泉驿正黑", "宋体";
 			font-weight: lighter;
 			text-align: center;
-			margin-top: 4rem;
+			margin-top: 3rem;
 		}
 		.inp
 		{
@@ -41,10 +41,15 @@
 		{
 			font-family: "微软雅黑";
 		}
+		#other
+		{
+			width: 83%;
+		}
 	</style>
 </head>
 <script type="text/javascript" src="./js/mybig.js"></script>
 <script type="text/javascript" src="./js/largePrime.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <body id="bd">
 <script type="text/javascript">
 	function getBoth()
@@ -52,20 +57,19 @@
 		var ssObj = document.getElementById("ss");
 		var intObj = document.getElementById("int");
 		//var prime = getPirme(2,2);
-		var prs = [9127,9133,9137,9151,9157,9161,9173,9181,9187,9199,9203,9209,9221,9227,9239,9241,9257,9277,9281,9283,9293,9311,9319,9323,9337,9341,9343,9349,9371,9377,9391,9397,9403,9413,9419,9421,9431,9433,9437,9439,9461,9463,9467,9473,9479,9491,9497,9511,9521,9533,9539,9547,9551,9587,9601,9613,9619,9623,9629,9631,9643,9649,9661,9677,9679,9689,9697,9719,9721,9733,9739,9743,9749,9767,9769,9781,9787,9791,9803,9811,9817,9829,9833,9839,9851,9857,9859,9871,9883,9887,9901,9907,9923,9929,9931,9941,9949,9967,9973];
-		var prime = prs[randBoth(0, prs.length - 1)];
-		var inte = randBoth(29,39);
+		//var prs = [9127,9133,9137,9151,9157,9161,9173,9181,9187,9199,9203,9209,9221,9227,9239,9241,9257,9277,9281,9283,9293,9311,9319,9323,9337,9341,9343,9349,9371,9377,9391,9397,9403,9413,9419,9421,9431,9433,9437,9439,9461,9463,9467,9473,9479,9491,9497,9511,9521,9533,9539,9547,9551,9587,9601,9613,9619,9623,9629,9631,9643,9649,9661,9677,9679,9689,9697,9719,9721,9733,9739,9743,9749,9767,9769,9781,9787,9791,9803,9811,9817,9829,9833,9839,9851,9857,9859,9871,9883,9887,9901,9907,9923,9929,9931,9941,9949,9967,9973];
+		var prime = 383;//prs[randBoth(0, prs.length - 1)];
+		//var inte = randBoth(29,39);
+		var inte = 5;//randInte();
 		ssObj.value = prime;
-		ssObj.readOnly = "readonly";
 		intObj.value = inte;
-		intObj.readOnly = "readonly";
 		//alert(inte);
 		//alert(prime);
 	}
 	function getUser()
 	{
 		var userObj = document.getElementById("userNum")
-		var user = randBoth(5,9);
+		var user = randBoth(5,10);
 		userObj.value = user;
 
 	}
@@ -77,37 +81,39 @@
 <script type="text/javascript">
 	function create()
 	{
-		document.getElementById("bd").style.cursor = 'wait';
 		var prime = document.getElementById("ss").value;
 		var inte = document.getElementById("int").value;
 		var user = document.getElementById("userNum").value;
 		var pub = getPub(user, inte, prime);
-		document.getElementById("bd").style.cursor = 'default';
 		document.getElementById("pub").value = pub;
-
 	}
 	function getPub(user, inte, prime)
 	{
-		var mtv = inte.toString();
-		for (var i = 0; i < user - 1; i++) {
-			mtv = multiplicative(mtv,inte.toString());
-		}
-		var pub = parseInt(mtv) % prime;
+		var pub = inte ** user % prime;
 		return pub;
 		//alert(mtv);
 	}
+	function im()
+	{
+		var other = document.getElementById("other").value;
+		var prime = document.getElementById("ss").value;
+		var user = document.getElementById("userNum").value;
+		var key = other ** user % prime;
+		$("#junk").hide(200);
+		$("#useful").show();
+		document.getElementById("key").value = key;
+	}
 </script>
-
 <h2 class="titxt">密钥生成</h2>
-<div class="cont">
-	<button type="button" class="btn btn-outline-primary btn-lg btn-block" style="margin-bottom: 1.5rem;margin-top: 5rem" onclick="getBoth()">生成素数、底数</button>
+<div class="cont" id="junk">
+	<button type="button" class="btn btn-outline-primary btn-lg btn-block" style="margin-bottom: 1.5rem;margin-top: 3rem" onclick="getBoth()">生成素数、底数</button>
 	<div class="lt">
 		<label for="ss" class="lab">素数: &nbsp;</label>
-		<input type="text" class="inp shortInp form-control" id="ss" placeholder="素数（可自行填写）">
+		<input type="text" class="inp shortInp form-control" id="ss" placeholder="素数（预定义）" readonly="readonly">
 	</div>
 	<div class="lt" style="margin-top: 0.5rem">
 		<label for="int" class="lab">底数: &nbsp;</label>
-		<input type="text" class="inp shortInp form-control" id="int" placeholder="底数（可自行填写）">
+		<input type="text" class="inp shortInp form-control" id="int" placeholder="底数（预定义）" readonly="readonly">
 	</div>
 
 	<button type="button" class="btn btn-outline-primary btn-lg btn-block" style="margin-bottom: 1.5rem;margin-top: 5rem" onclick="getUser()">生成私钥</button>
@@ -121,8 +127,27 @@
 	<div class="lt">
 		<label for="ss" class="lab">公钥: &nbsp;</label>
 		<input type="text" class="inp shortInp form-control" id="pub" placeholder="公钥" readonly="readonly">
+
 	</div>
-	<button type="button" class="btn btn-primary btn-lg btn-block" style="margin-top: 3rem" onclick="goBack()">返回到主页</button>
+	<div class="lt" style="margin-top: 0.5rem">
+		<label for="other" class="lab">对方的公钥: &nbsp;</label>
+		<input type="text" class="inp shortInp form-control" id="other" placeholder="对方的公钥">
+		<button type="button" class="btn btn-outline-success btn-lg btn-block" style="margin-top: 3rem" onclick="im()">生成通讯密钥</button>
+	</div>
+	<button type="button" class="btn btn-primary btn-lg btn-block" style="margin-top: 0.5rem" onclick="goBack()">返回到主页</button>
 </div>
+<div class="cont" id="useful">
+	<div class="lt">
+		<label for="key" class="lab" style="margin-top: 5rem;">密钥: &nbsp;</label>
+		<input type="text" class="inp shortInp form-control" id="key" placeholder="密钥" readonly="readonly">
+
+	</div>
+	<button type="button" class="btn btn-primary btn-lg btn-block"  style="margin-top: 3rem" onclick="goBack()">返回到主页</button>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#useful").hide();
+});
+</script>
 </body>
 </html>
