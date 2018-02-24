@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>加密</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style type="text/css">
+		.titxt
+		{
+			font-size: 3rem;
+			margin-bottom: 0.5rem;
+			line-height: 1.2;
+			color: inherit;
+			font-family: "微软雅黑 Light", "微软雅黑", "龙泉驿正黑", "宋体";
+			font-weight: lighter;
+			text-align: center;
+			margin-top: 3rem;
+		}
+		.inp
+		{
+			display: inline !important;
+			font-family: "consolas", "menlo";
+		}
+		.shortInp
+		{
+			width: 35rem;
+			overflow: visible;
+			margin: 0;
+		}
+		.cont
+		{
+			margin-top: 3rem;
+			text-align: center;
+			width: 38.5rem;
+			margin: 0 auto;
+		}
+		.lab
+		{
+			font-family: "微软雅黑";
+		}
+		.btn
+		{
+			font-family: "微软雅黑";
+		}
+		.area
+		{
+			height: 25rem;
+			resize: none;
+		}
+	</style>
+</head>
+<body>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="./js/aes.js"></script>
+<script type="text/javascript">
+	function goBack()
+	{
+		window.location.href="./index.html";
+	}
+</script>
+<h2 class="titxt">AES解密</h2>
+<div class="cont" id="junk" style="margin-bottom: 1.5rem;margin-top: 3rem">
+	<div>
+		<label for="key" class="lab">密钥: &nbsp;</label>
+		<input type="text" class="inp shortInp form-control" id="key" placeholder="密钥">
+	</div>
+	<div>
+		<label for="text" class="lab" style="float: left;margin-top: 1rem">&nbsp;密文: &nbsp;</label>
+		<textarea type="text" class="inp shortInp form-control area" id="text" placeholder="密文" style="margin-top: 1rem;"></textarea>
+	</div>
+	<button type="button" class="btn btn-outline-success btn-lg btn-block" style="margin-top: 3rem" onclick="dec()">翻译密文</button>
+	<button type="button" class="btn btn-primary btn-lg btn-block" style="margin-top: 1rem" onclick="goBack()">返回到主页</button>
+</div>
+<div class="cont" id="useful">
+	<div class="lt">
+		<label for="res" class="lab" style="float: left;margin-top: 3rem">明文: &nbsp;</label>
+		<textarea type="res" class="inp shortInp form-control area" style="margin-top: 3rem" id="res" placeholder="明文" readonly="readonly"></textarea>
+	</div>
+	<button type="button" class="btn btn-primary btn-lg btn-block"  style="margin-top: 3rem" onclick="goBack()">返回到主页</button>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#useful").hide();
+	});
+</script>
+<script type="text/javascript">
+	function dec()
+	{
+		var key = document.getElementById("key").value;
+		var text = document.getElementById("text").value;
+		var res = de(text,key);
+		alert(res);
+		$("#junk").hide(200);
+		$("#useful").show();
+		document.getElementById("res").value = res;
+		document.getElementById("res").readOnly = true;
+	}
+	function de(text,key)
+	{
+		return CryptoJS.AES.decrypt(text,key).toString(CryptoJS.enc.Utf8);
+	}
+</script>
+</body>
+</html>
