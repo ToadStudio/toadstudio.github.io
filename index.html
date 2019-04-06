@@ -7,7 +7,49 @@
     <link href="./css/index.css" rel="stylesheet">
     <style></style>
   </head>
-
+  <script>
+    function rand(minNum,maxNum){ 
+    switch(arguments.length){ 
+        case 1: 
+            return parseInt(Math.random()*minNum+1,10); 
+        break; 
+        case 2: 
+            return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
+        break; 
+            default: 
+                return 0; 
+            break; 
+    } 
+    }
+    var u = new Array(
+    "https://www.google.com",
+    "https://mirrors.ustc.edu.cn",
+    "https://www.wikipedia.org",
+    "https://steampowered.com",
+    "https://www.amd.com",
+    "https://www.intel.com",
+    "https://www.startpage.com",
+    "https://www.github.com",
+    "https://www.microsoft.com",
+    "https://program-think.blogspot.com",
+    "https://www.codeforces.com",
+    "https://www.gnu.org",
+    "https://x.org",
+    "https://kde.org",
+    "https://gnome.org",
+    "https://www.opensuse.org/",
+    "https://www.archlinux.org/",
+    "https://www.whitehouse.gov/",
+    "https://www.bundeskanzlerin.de/bkin-de"
+    );
+    
+    function jump()
+    {
+        var r = rand(0, u.length - 1);
+        top.location = u[r];
+    }
+    
+  </script>
   <body>
       <div class="cd">
         
@@ -15,7 +57,7 @@
         <br>
         <p class="lk"><a class="btn btn-block btn-info btn-lg" href=""><span class="icons fui-document"></span> Matlib Documentation</a></p>
         <p class="lk"><a class="btn btn-block btn-primary btn-lg" href="#"><span class="icons fui-new"></span> ToadStudio's Blog</a></p>
-        <p class="lk"><a class="btn btn-block btn-inverse btn-lg" href="#"><span class="icons fui-arrow-right"></span> Anything Else...</a></p>
+        <p class="lk"><a id="any" class="btn btn-block btn-inverse btn-lg" href="javascript:void(0)" onclick="jump()"><span class="icons fui-arrow-right"></span> Anything Else...</a></p>
         <br><br>
         <p>Copyright © <a class="" href="toadstudio.github.io">ToadStudio</a> (2019)</p>
         <p>License: <a style="color: #E67E22" href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en">CC BY-NC-ND 3.0</a></p>
