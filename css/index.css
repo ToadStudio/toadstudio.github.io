@@ -1,0 +1,41 @@
+*
+{
+    margin: 0;
+    text-align: center;
+}
+
+body
+{
+    background: url(https://source.unsplash.com/user/erondu/1920x1080) no-repeat fixed;
+}
+
+.cd
+{
+    width: 364px;
+    background: rgba(255,255,255,.85);
+    border-radius: 5px;
+    margin: 120px auto;
+    height:450px;
+    padding: 50px;
+}
+
+.lk
+{
+    width: 90%;
+    height: 40px;
+    margin-bottom: 30px;
+    text align: center;
+}
+
+.btn
+{
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    font-size: 25px;
+}
+
+.icons
+{
+    font-size: 20px;
+}
