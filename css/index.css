@@ -39,3 +39,15 @@ body
 {
     font-size: 20px;
 }
+
+.deed
+{
+    color: #E67E22;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+.deed:hover
+{
+    color: #D35400;
+}
