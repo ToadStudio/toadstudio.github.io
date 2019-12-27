@@ -660,29 +660,10 @@ td {
 }
 .sidebar-ov-author__avatar_img {
   opacity: 1;
+  border-radius: 50%;
 }
 .sidebar-ov-author__avatar:hover .sidebar-ov-author__avatar_img {
   animation: avatar-turn 0.8s both ease-out;
-}
-@-moz-keyframes avatar-turn {
-  100% {
-    transform: rotate(1turn);
-  }
-}
-@-webkit-keyframes avatar-turn {
-  100% {
-    transform: rotate(1turn);
-  }
-}
-@-o-keyframes avatar-turn {
-  100% {
-    transform: rotate(1turn);
-  }
-}
-@keyframes avatar-turn {
-  100% {
-    transform: rotate(1turn);
-  }
 }
 .sidebar-ov-author__p {
   margin: 0.5rem 0 0;
