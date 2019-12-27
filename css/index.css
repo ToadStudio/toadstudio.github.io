@@ -1403,7 +1403,7 @@ td {
   font-size: 1.5rem;
   color: #71cbc6;
   transition-property: color;
-  transform: rotate(-45deg);
+  transform: rotate(0);
   transition-delay: 0s;
   transition-timing-function: ease;
   transition-duration: 0.2s;
