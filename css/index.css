@@ -441,7 +441,7 @@ td {
 .header-inner {
   width: 100%;
   font-size: 18px;
-  height: 80vh;
+  height: 100vh;
 }
 .header-nav {
   position: fixed;
