@@ -1401,7 +1401,7 @@ td {
 }
 .back2top-icon {
   font-size: 1.5rem;
-  color: #49b1f5;
+  color: #71cbc6;
   transition-property: color;
   transform: rotate(-45deg);
   transition-delay: 0s;
@@ -1409,7 +1409,7 @@ td {
   transition-duration: 0.2s;
 }
 .back2top-icon:hover {
-  color: #fc6423;
+  color: #f589a9;
 }
 .external-link i {
   margin: 0 0.1em 0 0.2em;
