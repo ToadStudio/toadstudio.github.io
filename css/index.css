@@ -1034,13 +1034,6 @@ td {
 .post-header-meta-reading-count {
   color: #fc6423;
 }
-.post-end {
-  margin: 0 0 1rem;
-  padding: 1rem 0 0;
-  text-align: center;
-  color: #b6b6b6;
-  border-top: 1px dashed #e4e4e4;
-}
 .post-tags {
   margin: 0 0 1rem;
 }
