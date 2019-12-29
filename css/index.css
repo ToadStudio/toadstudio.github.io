@@ -1884,7 +1884,8 @@ a,
 .sidebar-toc .active > a,
 .sidebar-toc .current > a,
 .sidebar-reading-line,
-post-tags-item {
+post-tags-item,
+a:hover {
   color: #f589a9 !important;
 }
 .sidebar-nav .current {
