@@ -1898,7 +1898,8 @@ sidebar-ov-state__a--count {
   color: #f589a9 !important;
 }
 .header-nav-menu-item > .header-nav-menu-item__a,
-.sidebar-ov-social__item {
+.sidebar-ov-social__item,
+.sidebar-ov-social__item:hover {
   color: #f4f5f5 !important;
 }
 .header-info-title {
