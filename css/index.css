@@ -1872,3 +1872,6 @@ td {
     width: 100%;
   }
 }
+.footer-inner a {
+  color: #71cbc6 !important;
+}
