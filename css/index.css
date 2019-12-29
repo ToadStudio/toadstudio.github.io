@@ -1914,7 +1914,7 @@ post-tags-item,
 }
 @media all and (max-width: 768px) {
   .header-info-title {
-    font-size: 1rem !important;
+    font-size: 2rem !important;
   }
 }
 .post-header-title__a,
