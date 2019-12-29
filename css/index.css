@@ -1884,7 +1884,8 @@ a {
 a:hover {
   color: #f589a9;
 }
-.sidebar-reading-line {
+.sidebar-reading-line,
+.paginator .current {
   background: #f589a9 !important;
 }
 .sidebar-ov-social__item {
