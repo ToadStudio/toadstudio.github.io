@@ -1872,6 +1872,12 @@ td {
     width: 100%;
   }
 }
-.footer-inner a {
+.footer-inner a,
+.sidebar-reading-line,
+a {
   color: #71cbc6 !important;
+}
+.sidebar-toc .active > a,
+.sidebar-toc .current > a {
+  color: #f589a9 !important;
 }
