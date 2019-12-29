@@ -1878,6 +1878,11 @@ a {
   color: #71cbc6 !important;
 }
 .sidebar-toc .active > a,
-.sidebar-toc .current > a {
+.sidebar-toc .current > a,
+.sidebar-reading-line {
+  color: #f589a9 !important;
+}
+.sidebar-nav .current {
+  border-color: #f589a9 !important;
   color: #f589a9 !important;
 }
