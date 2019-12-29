@@ -1912,6 +1912,11 @@ post-tags-item,
 .header-info-title {
   font-size: 3rem;
 }
+@media all and (max-width: 768px) {
+  .header-info-title {
+    font-size: 1rem !important;
+  }
+}
 .post-header-title__a,
 .post-header-title__a:hover {
   color: #000 !important;
