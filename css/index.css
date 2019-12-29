@@ -1873,10 +1873,15 @@ td {
   }
 }
 .footer-inner a,
-a,
 .post-header-meta-update,
 .post-header-meta-reading-time {
   color: #71cbc6 !important;
+}
+a {
+  color: #71cbc6;
+}
+a:hover {
+  color: #f589a9;
 }
 .sidebar-reading-line {
   background: #f589a9 !important;
@@ -1888,7 +1893,6 @@ a,
 .sidebar-toc .current > a,
 .sidebar-reading-line,
 post-tags-item,
-a:hover,
 .sidebar-nav > span:hover,
 sidebar-ov-state__a--count {
   color: #f589a9 !important;
