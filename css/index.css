@@ -1873,11 +1873,13 @@ td {
   }
 }
 .footer-inner a,
-.sidebar-reading-line,
 a,
 .post-header-meta-update,
 .post-header-meta-reading-time {
   color: #71cbc6 !important;
+}
+.sidebar-reading-line {
+  background: #71cbc6 !important;
 }
 .sidebar-toc .active > a,
 .sidebar-toc .current > a,
