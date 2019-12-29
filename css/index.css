@@ -1259,6 +1259,8 @@ td {
 }
 .highlight pre {
   margin: 0;
+  white-space: pre-wrap;
+  counter-reset: line;
 }
 .highlight td {
   border-width: 0;
@@ -1297,17 +1299,30 @@ td {
   color: rgba(117,117,117,0.6);
 }
 .highlight .code {
-  padding: 0 0 0 0.4rem;
+  padding: 0;
 }
 .highlight .gutter {
   padding: 0.4rem 0.6rem;
   width: 1rem;
   background-color: #f0f3f6;
+  display: none;
 }
 .highlight .gutter pre {
   text-align: right;
   color: #c8c8c8;
   background-color: inherit;
+}
+.highlight .line::before {
+  content: counter(line);
+  display: inline-block;
+  margin: 0 0.4rem 0 0;
+  box-sizing: content-box;
+  padding: 0 0.8rem 0 0.4rem;
+  min-width: 1rem;
+  text-align: right;
+  color: #c8c8c8;
+  background-color: #f0f3f6;
+  counter-increment: line;
 }
 .highlight .variable,
 .highlight .attribute {
