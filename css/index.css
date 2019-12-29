@@ -1881,6 +1881,9 @@ a,
 .sidebar-reading-line {
   background: #f589a9 !important;
 }
+.sidebar-ov-social__item {
+  background: #71cbc6 !important;
+}
 .sidebar-toc .active > a,
 .sidebar-toc .current > a,
 .sidebar-reading-line,
@@ -1894,7 +1897,7 @@ a:hover,
   color: #f589a9 !important;
 }
 .header-nav-menu-item > .header-nav-menu-item__a,
-sidebar-ov-social__item {
+.sidebar-ov-social__item {
   color: #f4f5f5 !important;
 }
 .header-info-title {
