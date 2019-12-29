@@ -1912,3 +1912,6 @@ post-tags-item,
 .post-header-title__a:hover {
   color: #000 !important;
 }
+body {
+  background: #d8efee !important;
+}
