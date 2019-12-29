@@ -1028,6 +1028,12 @@ td {
 .post-header-meta-update {
   color: #49b1f5;
 }
+.post-header-meta-reading-time {
+  color: #49b1f5;
+}
+.post-header-meta-word-count {
+  color: #666;
+}
 .post-header-meta-reading-count {
   color: #fc6423;
 }
