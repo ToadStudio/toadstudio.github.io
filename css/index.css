@@ -1904,6 +1904,7 @@ sidebar-ov-state__a--count {
 .header-info-title {
   font-size: 3em;
 }
-.post-header-title__a {
+.post-header-title__a,
+.post-header-title__a:hover {
   color: #000 !important;
 }
