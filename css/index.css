@@ -1889,7 +1889,8 @@ a,
 .sidebar-reading-line,
 post-tags-item,
 a:hover,
-.sidebar-nav > span:hover {
+.sidebar-nav > span:hover,
+sidebar-ov-state__a--count {
   color: #f589a9 !important;
 }
 .sidebar-nav .current {
