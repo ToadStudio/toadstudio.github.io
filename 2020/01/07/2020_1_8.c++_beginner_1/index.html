@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="keywords" content="CodeMonkey01 (ToadStudio), CodeMonkey01的博客"><meta name="description" content=""><title>CodeMonkey01的博客</title><link rel="icon" href="https://i.ibb.co/y8Mky7Z/icon-16.png?v=1.5.4" type="image/png" sizes="16x16"><link rel="icon" href="https://i.ibb.co/L54MVpT/icon-32.png?v=1.5.4" type="image/png" sizes="32x32"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=1.5.4"><script>var Stun = window.Stun || {};
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="keywords" content="CodeMonkey01 (ToadStudio), CodeMonkey01的博客"><meta name="description" content=""><title>C++从入门到入土[1]：Hello World</title><link rel="icon" href="https://i.ibb.co/y8Mky7Z/icon-16.png?v=1.5.4" type="image/png" sizes="16x16"><link rel="icon" href="https://i.ibb.co/L54MVpT/icon-32.png?v=1.5.4" type="image/png" sizes="32x32"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=1.5.4"><script>var Stun = window.Stun || {};
 var CONFIG = {
   root: '/',
   algolia: undefined,
@@ -17,7 +17,7 @@ var CONFIG = {
   prompt: {"copy_success":"复制成功","copy_error":"复制失败","creative_commons":"知识共享","copy_button":"点击复制"}
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav"><div class="header-nav-inner"><div class="header-nav-btn fa fa-bars"></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/"><i class="fa fa-home"></i>首页</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/archives/"><i class="fa fa-folder-open"></i>归档</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/categories/"><i class="fa fa-th"></i>分类</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/tags/"><i class="fa fa-tags"></i>标签</a></div></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="header-info-title">CodeMonkey01的博客</div><div class="header-info-subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home"><section class="post-list"><article class="post"><header class="post-header"><h1 class="post-header-title"><a class="post-header-title__a" href="/2020/01/07/2020_1_8.c++_beginner_1/">C++从入门到入土[1]：Hello World</a></h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2020-01-07</span></span><span class="post-header-meta-update"><i class="fa fa-calendar-check-o"></i><span>更新于 </span><span>2020-01-07</span></span><span class="post-header-meta-reading-time"><i class="fa fa-clock-o"></i><span>阅读时长 </span><span>16m</span></span></div></header><div class="post-body"><div class="post-body-excerpt"><h2 id="前言"><span class="heading-link">前言</span></h2><p>みんなさんこんにちは（大家吼啊）！本篇就是本蒟蒻博客的第一个系列<a href="https://toadstudio.github.io/2020/01/07/2020_1_7.c++_beginner_0/">《C++从入门到入土》</a>的第一篇文章了（敲黑板）！如果正在阅读本篇文章的你还不知道这个系列为什么这么奇妙深刻的话，欢迎访问本系列的第【零】篇文章（也就是序啦~）（链接就是上一个超链接）了解一下详情。相信各位大佬在结束阅读之后，不论本蒟蒻将会写出怎样奇妙深刻的内容，都会见怪不怪了（逃</p>
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav"><div class="header-nav-inner"><div class="header-nav-btn fa fa-bars"></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/"><i class="fa fa-home"></i>首页</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/archives/"><i class="fa fa-folder-open"></i>归档</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/categories/"><i class="fa fa-th"></i>分类</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/tags/"><i class="fa fa-tags"></i>标签</a></div></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="header-info-title">CodeMonkey01的博客</div><div class="header-info-subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content"><div class="post"><header class="post-header"><h1 class="post-header-title">C++从入门到入土[1]：Hello World</h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2020-01-07</span></span><span class="post-header-meta-update"><i class="fa fa-calendar-check-o"></i><span>更新于 </span><span>2020-01-07</span></span><span class="post-header-meta-reading-time"><i class="fa fa-clock-o"></i><span>阅读时长 </span><span>16m</span></span><span class="post-header-meta-reading-count"><i class="fa fa-eye"></i><span>阅读次数 </span><span id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><h2 id="前言"><span class="heading-link">前言</span></h2><p>みんなさんこんにちは（大家吼啊）！本篇就是本蒟蒻博客的第一个系列<a href="https://toadstudio.github.io/2020/01/07/2020_1_7.c++_beginner_0/">《C++从入门到入土》</a>的第一篇文章了（敲黑板）！如果正在阅读本篇文章的你还不知道这个系列为什么这么奇妙深刻的话，欢迎访问本系列的第【零】篇文章（也就是序啦~）（链接就是上一个超链接）了解一下详情。相信各位大佬在结束阅读之后，不论本蒟蒻将会写出怎样奇妙深刻的内容，都会见怪不怪了（逃</p>
 <p>既然是本系列第一篇文章，本蒟蒻就事先郑重声明一下（其实本系列的序已经说过差不多的话了，但是此处的声明将会对整个系列生效）：</p>
 <ul>
 <li>本蒟蒻已经很久没有摸过C++了（这都得拜目前本蒟蒻所在的破学校不如2G速度的优秀网络环境所赐），加之本蒟蒻本身就是大蒟蒻一枚，所以出现错误（表述和程序上的）在所难免。希望大佬们如有发现，能在评论区指出，本蒟蒻看到后会做出相关修正，也感谢大佬们的支持配合</li>
@@ -185,132 +185,27 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.0"></he
             });
             document.body.appendChild(img);
           });
-      </script></div></div></article><article class="post"><header class="post-header"><h1 class="post-header-title"><a class="post-header-title__a" href="/2020/01/07/2020_1_7.c++_beginner_0/">C++从入门到入土[0]：序</a></h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2020-01-07</span></span><span class="post-header-meta-update"><i class="fa fa-calendar-check-o"></i><span>更新于 </span><span>2020-01-07</span></span><span class="post-header-meta-reading-time"><i class="fa fa-clock-o"></i><span>阅读时长 </span><span>7m</span></span></div></header><div class="post-body"><div class="post-body-excerpt"><h2 id="前言"><span class="heading-link">前言</span></h2><p>みんなさん大家吼啊！最近本蒟蒻的一个朋友（完全没有编程基础）想要入<code>C++</code>这个大坑，为了省点口舌，同时也让自己复习一下C++基础知识（注：虽然本蒟蒻曾经打过NOIP（现已正式AFO），但目前本蒟蒻所在学校处在荒山野岭之中，网络基础设施极其堪忧，导致编程的兴趣大不如前，自2019年暑假以来一行C++代码都不曾写过，C++都快忘光了），故此，本蒟蒻决定开坑这个系列（能坚持几天是另一回事了<del>在写了，在写了.jpg</del>）。虽然名字取得<del>很动听</del>，但由于本蒟蒻实在是太蒻了，所以难免会出现一些表述和程序上的错误。各位大佬如有发现，欢迎在评论区提出，本蒟蒻感激不尽。</p>
-<p>敬上</p>
-<h2 id="C-简介"><span class="heading-link">C++简介</span></h2><blockquote>
-<p>前注：请以<span class="external-link"><a href="https://zh.wikipedia.org/zh-cn/C++" target="_blank" rel="noopener">C++的中文维基百科页面</a><i class="fa fa-external-link"></i></span>为准，以下内容均为本蒟蒻自己对C++浅薄理解，不保证完全正确，还请各位大佬多多包涵了</p>
-</blockquote>
-<h3 id="C-的前世今生"><span class="heading-link">C++的前世今生</span></h3><p>Once upon a time，<del>科技落后的</del>人类终于掌握了最基本的电子计算机科技。当时的程序猿们只能使用能够直接让计算机读懂的二进制码来写程序。后来，出现了一个划时代的转折——汇编语言的诞生。从此以后，终于有了人类能够勉强阅读的代码。直到今天，汇编语言由于其与硬件的紧密联系仍然被应用于系统内核、工控、嵌入式计算一类的领域。但汇编语言仍然极度繁琐，由于其类似于调用CPU指令集的特性，导致代码通常很长而且不知所云。举个例子：</p>
-<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">; 以下为Intel格式的汇编代码，源文件后缀名.asm</span><br><span class="line">section .data</span><br><span class="line">    strHello db "Hello,world!", 0Ah</span><br><span class="line">    STRLEN equ $ - strHello</span><br><span class="line">section .text</span><br><span class="line">    global _start</span><br><span class="line"></span><br><span class="line">_start:</span><br><span class="line">    mov edx, STRLEN</span><br><span class="line">    mov ecx, strHello</span><br><span class="line">    mov ebx, 1</span><br><span class="line">    mov eax, 4</span><br><span class="line">    int 0x80</span><br><span class="line">    mov ebx, 0</span><br><span class="line">    mov eax, 1</span><br><span class="line">    int 0x80</span><br></pre></td></tr></tbody></table></div></figure>
-<p>写这样一堆人类难以理解的话，只是为了在屏幕上打印一串<code>Hello World!</code>。如果要实现更复杂的功能，代码的复杂度则会呈指数上升，而且学习成本非常高，非常不容易上手。</p>
-<p>于是，在1972年，贝尔实验室里面诞生了人类历史上计算机界的一块伟大的里程碑——C语言横空出世。</p>
-<p>凭借着高效、灵活、功能丰富、表达力强和较高的可移植性等优点，C语言在短时间内占领了软件领域，直到现在，C语言仍被非常广泛地应用在软硬件行业里面。</p>
-<p>由于C语言的成功，C语言的官方钦定后继者——C++语言，得以成功发布。C++语言采用了更为现代的理念（虽然比起现在的其他很多广泛应用的语言也相当远古了），支持了包括对后世影响深远的面向对象编程在内的新的编程范式，同时集成的SDL函数使广大程序猿们省下了不少代码，守护了千千万万挑灯夜战的年轻程序猿们脆弱的发际线。现在流行的编程语言中，99%都受到了C++的影响（<del>数据是本蒟蒻胡扯的，别真信了</del>，不过就这个现象而言是完全正确的），或多或少都能看出C++的影子。尽管C++也已经非常远古了，但其直到今天也完全没有过时的迹象，甚至仍然可以挤进最流行的编程语言排行榜的前几名。诸如上班族学生人人皆知的Microsoft Office的绝大部分代码、你现在正在盯着看的Windows/macOS/Linux/Android/iOS系统的绝大部分源代码、以及其他千千万万的程序、游戏引擎、类库，都使用C++写成。</p>
-<p>那，是什么使得C++如此经久不衰呢？</p>
-<h3 id="C-的长处与短板"><span class="heading-link">C++的长处与短板</span></h3><p>C++以其高效率、高兼容性、与底层硬件联系紧密闻名于世。从（稍微好一点的）单片机到树莓派到移动设备到ATM机到个人电脑到服务器工作站到NASA超算都具备运行C++的可能性，能比肩这样优秀的兼容性而且现在仍在使用的语言估计只有汇编和C了。前者应用率很低下，除了最最最最底层的东西基本没人用了，C则是C++的爸爸，本质上两者是一样的，所以经常可以看到<code>C/C++</code>这样的写法，因此就应用场合的广泛性而言，C家族的语言（狭义，只包含C/C++）的地位短期内不可撼动。C++的功能性与可扩展性都比C更强，运行性能却能基本持平C语言，而且图形编程到网络编程到嵌入式编程均可胜任，第三方类库也比C语言更丰富，可谓是上得厅堂下得厨房，所以在不那么贴近硬件底层的领域里面，C++的使用率碾压C语言。刚才提到的C++的运行效率可以比肩C语言，而C语言是目前人类常用的编程语言中除了汇编语言外绝对的效率No. 1，在这方面又有着不可替代的优势。业界笑话有云：</p>
-<blockquote>
-<p>要实现同样的功能，Python要20s，Java要2s，C++只要1s</p>
-<p>但是要实现同样的功能，C++要写200行，Java要100行，Python只要10行</p>
-</blockquote>
-<p>这可谓是相当精辟了，不但道出了C++的高效率，同时也吐槽了C++的复杂性。</p>
-<p>由于C++是古已有之的C的官方钦定升级版本，而且发布时间比起现在流行的任何一门编程语言都要早上许多，所以背负着极其沉重的历史包袱，C++标准一代代更新，这些历史包袱却无法卸掉。几个典型的问题使得很多人对C++望而却步：其复杂而且极易出错的指针和内存地址操作，和没有一样的字符串功能，以及（与现在的很多语言相比）极其低下的编码效率，等等。这些问题在现在看来不容忽视，所以即使不采用C++写程序，也无可厚非。但C++对当今计算机编程影响深远，学好C++，即便未来不用了，对于其他编程语言的学习也是大有裨益的。</p>
-<p>题外话：以上所说的也是本蒟蒻学习C++的原动力，并不是为了什么NOIP或者其他XX竞赛。事实上关于此类竞赛，本蒟蒻并不是很赞赏（直球），至于原因，由于与本篇博文主题不大相干又会比较长篇大论，而且注定会极富争议性，所以就等之后等本蒟蒻哪天兴致来了再来写一篇文章分析原因，就当是现在又挖了个新坑吧（猝死）。</p>
-<h3 id="关于C-的一些基本信息"><span class="heading-link">关于C++的一些基本信息</span></h3><p>（此列表大概会不定期更新的）</p>
-<ol>
-<li>C++是编译型语言，程序里不能有任何语法错误，否则无法通过编译过程，也就没有可执行文件。但是由于C++编译器太水了，一大半的逻辑错误和内存地址/空指针错误都分析不出来，所以即使是通过了编译也很有可能程序跑到一半遇到某个逻辑错误崩溃。这是十分常见的Bug，如果你对此不满，可以去了解一下<code>Rust</code>语言，可以做到在编译过程中指出一大半的逻辑错误。</li>
-<li>C++没有预编译过程，所以一律按从上到下的顺序执行代码，如果上面的代码调用了下面定义的东西（函数/变量名/etc.）就会报错。</li>
-<li>C++是强变量类型的语言，类型间的转换与各色魔法也是C++的<del>乐趣</del>之一</li>
-<li>虽然C++有统一标准，但是细节上每种编译器和操作系统都会有不同的处理方法，所以C++并不是和Java一样，一旦写出来就放之四海皆准了，要针对不同的操作系统平台和编译器处理兼容性问题。在Linux平台上针对GCC编译器写的CPP文件不一定能通过Windows上的VC++的编译，反之亦然。即使都是GCC编译器，Linux平台上写的CPP文件也不一定能通过Windows的GCC移植版本MinGW-GCC的编译过程，反之亦然。即使都是Linux系统，针对Clang/LLVM编译器写的CPP文件也不一定能通过GCC编译器的编译过程，反之亦然。</li>
-<li>每个版本的C++标准和功能都不同。C++98（1998年）或者C++03（2003年）是默认的C++标准，但更常用的是C++11（2011年）、C++14（2014年）和C++17（2017年）标准。目前最新的C++20（2020年）标准也快要发布了。理论上标准越新功能越多，实际上并不总是这样，标准与标准之间还有很多区别，这里不赘述了。总之根据自己的需求选择C++标准就好。</li>
-<li>最标准的C++编译器是GNU组织发布的开源编译器GCC，仅支持Unix-like系统（Linux/macOS）的运行环境，但是Windows上面可以使用MinGW-GCC这一移植版本。推荐新手使用<code>Linux</code> + <code>GCC</code>的组合，是最原汁原味的C++编译与运行环境。GCC有很多版本，越新的版本能支持越新的标准，但老版本历经岁月磨砺稳定性通常会更好，此处可以根据自己的侧重点选择。本蒟蒻喜欢追求新事物，不太在乎稳定性，所以生产环境永远采用GCC最新版本，但在侧重稳定性的服务器上则有可能采用<code>GCC 6</code>甚至<code>GCC 4</code>这样的远古版本。</li>
-</ol>
-<h2 id="本系列目录"><span class="heading-link">本系列目录</span></h2><p>（注：此目录不定期更新，没加超链接的内容就是还在咕咕的文章，以后也许可能大概好像会写的）</p>
-<ul>
-<li><a href="#">C++从入门到入土[0]：序</a></li>
-<li>C++从入门到入土[1]：Hello World</li>
-<li>C++从入门到入土[2]：数据类型与运算符</li>
-<li>C++从入门到入土[3]：顺序结构与条件判断语句</li>
-<li>C++从入门到入土[4]：循环结构</li>
-<li>C++从入门到入土[5]：函数（基础）</li>
-<li>……（待续）</li>
-</ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article><article class="post"><header class="post-header"><div class="sticky-top" data-popover="置顶文章" data-popover-pos="up"><i class="sticky-top__i fa fa-thumb-tack"></i></div><h1 class="post-header-title"><a class="post-header-title__a" href="/2019/12/27/2019_12_27.the_first_blog/">博客须知</a></h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2019-12-27</span></span><span class="post-header-meta-update"><i class="fa fa-calendar-check-o"></i><span>更新于 </span><span>2019-12-29</span></span><span class="post-header-meta-reading-time"><i class="fa fa-clock-o"></i><span>阅读时长 </span><span>2m</span></span></div></header><div class="post-body"><div class="post-body-excerpt"><p>感谢大佬莅临本蒟蒻的博客！以下为本蒟蒻博客的博客须知。</p>
-<h2 id="博客情况"><span class="heading-link">博客情况</span></h2><h3 id="博客背景"><span class="heading-link">博客背景</span></h3><p>本博客是本蒟蒻在<del>摸鱼</del>之余维护的，用来记录一些想记录的东西<del>（这不是废话吗！？）</del></p>
-<p>由于本蒟蒻过于贫困，所以没有独立域名</p>
-<h3 id="博客内容"><span class="heading-link">博客内容</span></h3><p>本博客大概可能会包含以下内容（本蒟蒻：在写了(0%).jpg）（此列表不定期更新）：</p>
-<ol>
-<li>计算机<ul>
-<li>C++</li>
-<li>C#</li>
-<li>Linux</li>
-<li>算法</li>
-<li>Unity</li>
-<li>硬件</li>
-</ul>
-</li>
-<li>政治与历史<ul>
-<li>政治理论</li>
-<li>时政点评</li>
-<li>历史随想</li>
-<li>社会学</li>
-</ul>
-</li>
-<li>学习<ul>
-<li>语言学</li>
-<li>Deutsch</li>
-<li>数学</li>
-<li>物理学</li>
-</ul>
-</li>
-<li>随想<ul>
-<li>游戏随想</li>
-<li>书籍随想</li>
-<li>电影随想</li>
-<li>旅行随想</li>
-<li>日常随想</li>
-</ul>
-</li>
-</ol>
-<h2 id="博客公告"><span class="heading-link">博客公告</span></h2><p>前注：时间采用<code>YYYY.MM.DD</code>格式</p>
-<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2019.12.27  博客建立</span><br><span class="line">2019.12.29  博客外观定制基本完工，加入了Gitalk评论系统</span><br></pre></td></tr></tbody></table></div></figure>
+      </script></div><footer class="post-footer"><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-author-name">本文作者: </span><span class="post-copyright-author-value"><a href="https://toadstudio.github.io">CodeMonkey01 (ToadStudio)</a></span></div><div class="post-copyright-link"><span class="post-copyright-link-name">本文链接: </span><span class="post-copyright-link-value"><a href="https://toadstudio.github.io/2020/01/07/2020_1_8.c++_beginner_1/">https://toadstudio.github.io/2020/01/07/2020_1_8.c++_beginner_1/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-notice-name">版权声明: </span><span class="post-copyright-notice-value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><i class="post-tags-item__i fa fa-tags"></i><a class="post-tags-item__a" href="https://toadstudio.github.io/tags/C/">C++</a></span></div><nav class="paginator"><div class="paginator-post"><div class="paginator-post-next"><a class="paginator-post-next__a" href="/2020/01/07/2020_1_7.c++_beginner_0/"><span>C++从入门到入土[0]：序</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div><div class="comments" id="comments"><div id="gitalk-container"></div></div></div><aside class="sidebar" id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#你好，世界！"><span class="toc-number">2.</span> <span class="toc-text">你好，世界！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#梦开始的地方"><span class="toc-number">2.1.</span> <span class="toc-text">梦开始的地方</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#はじめまして、C"><span class="toc-number">2.2.</span> <span class="toc-text">はじめまして、C++</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CPP基本文件结构"><span class="toc-number">3.</span> <span class="toc-text">CPP基本文件结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#头文件引用"><span class="toc-number">3.1.</span> <span class="toc-text">头文件引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命名空间"><span class="toc-number">3.2.</span> <span class="toc-text">命名空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主函数"><span class="toc-number">3.3.</span> <span class="toc-text">主函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输入输出函数"><span class="toc-number">3.4.</span> <span class="toc-text">输入输出函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注释"><span class="toc-number">3.5.</span> <span class="toc-text">注释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结语"><span class="toc-number">4.</span> <span class="toc-text">结语</span></a></li></ol></div></section><!-- ov = overview --><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://i.ibb.co/qgFZ0Nt/12-02-sq.png" alt="avatar"></div><p class="sidebar-ov-author__p">CodeMonkey01</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social__item" href="https://github.com/ToadStudio/" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><i class="sidebar-ov-social__item--icon fa fa-github"></i></a><a class="sidebar-ov-social__item" href="https://twitter.com/codemonkeyeins" target="_blank" rel="noopener" data-popover="Twitter" data-popover-pos="up"><i class="sidebar-ov-social__item--icon fa fa-twitter"></i></a><a class="sidebar-ov-social__item" href="https://www.luogu.com.cn/user/75519" target="_blank" rel="noopener" data-popover="洛谷" data-popover-pos="up"><span class="sidebar-ov-social__item--logo">洛</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state__a posts" href="/archives/"><div class="sidebar-ov-state__a--count">3</div><div class="sidebar-ov-state__a--name">归档</div></a><a class="sidebar-ov-state__a categories" href="/categories/"><div class="sidebar-ov-state__a--count">2</div><div class="sidebar-ov-state__a--name">分类</div></a><a class="sidebar-ov-state__a tags" href="/tags/"><div class="sidebar-ov-state__a--count">2</div><div class="sidebar-ov-state__a--name">标签</div></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span>你已阅读了 </span><span class="sidebar-reading-info-num">0</span></div><div class="sidebar-reading-line"></div></div></div></aside><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>&copy; 2020</span><span> </span><span>CodeMonkey01 (ToadStudio).</span></div><div class="busuanzi"><span class="busuanzi-site_uv"><i class="fa fa-user"></i><span>访问人数 </span><span id="busuanzi_value_site_uv"></span></span><span class="separator">|</span><span class="busuanzi-site_pv"><i class="fa fa-eye"></i><span>浏览总量 </span><span id="busuanzi_value_site_pv"></span></span><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script></div><div><span>Hosted by <a href="https://pages.github.com/" rel="noopener" target="_blank">Github Pages</a><br>Theme edited by CodeMonkey01 (ToadStudio)<br><span>Theme Name 和泉紗霧の夏花火 (Izumi Sagiri no Natsu Hanabi)<span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="progress"></div></div><div class="back2top" id="back2top"><i class="back2top-icon fa fa-chevron-up"></i></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest.min.js" color="245,137,169" opacity="0.7" count="99" zIndex="-1"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-md5@latest/src/md5.min.js"></script><script>function loadGitalk () {
+  if (!document.getElementById('gitalk-container')) {
+    return;
+  }
 
-<h2 id="致读者们的话"><span class="heading-link">致读者们的话</span></h2><h3 id="前言"><span class="heading-link">前言</span></h3><p>はじめまして。</p>
-<p>首先，感谢各位大佬能够抽出一点宝贵的时间留步本蒟蒻的博客。</p>
-<p>介于本蒟蒻时间安排的不合理以及事务的繁忙，本博客的更新频率可能会极为随机化（哪天彻底停更了也是有可能的）。</p>
-<h3 id="写作动机"><span class="heading-link">写作动机</span></h3><p>很多时候，会有一些一闪而过的念头，或者学习了一些东西，却懒得打开笔记本。很多时候，发现了一些崭新的观点，却碍于笔尖与文思，迟迟得不到记录。</p>
-<p>本蒟蒻曾经在Twitter上写一些话，试图达到在这样的目的。然而Twitter的200字限制导致本蒟蒻只能不断地删减，删减，继续删减。最后，饱满的思想被剔得只剩下干瘪的骨架。也鲜有人愿意在Twitter这样一个显然快餐化的地方，查看长篇大论的文字。久而久之，本蒟蒻也没了写下去的念头。</p>
-<p>然而，有那么一个博客，<span class="external-link"><a href="https://program-think.blogspot.com" target="_blank" rel="noopener">编程随想的博客</a><i class="fa fa-external-link"></i></span>，启发了本蒟蒻，让本蒟蒻受益良多。从他的字句中，本蒟蒻读出了无数闪着光芒的深邃思想，有如大海般的深刻与洞察。在Twitter上早已不可寻觅的愉快感受——与真正的智慧相伴的感受，终于回到了本蒟蒻的心间。</p>
-<p>这正是博客的好处——可以深入的记录某一方面的内容，不必绞尽脑汁的压缩文字，不必为了涨Fo而曲意逢迎。字里行间里，流露着作者真实的思想与感受，闪烁着理性与思考的光芒。在写作之时，可以心平气和，对着Visual Studio Code的黑色UI，写下一点什么，或者什么也不写。这亦是Micro Blog平台所不能企及的优势。</p>
-<p>以上便是是本蒟蒻开始写博客的契机。</p>
-<p>（至于写博客的更多好处以及微博/Twitter的更多不足之处，可参见编程随想的<span class="external-link"><a href="https://program-think.blogspot.com/2013/04/why-write-blog.html" target="_blank" rel="noopener">这篇博文</a><i class="fa fa-external-link"></i></span>与<span class="external-link"><a href="https://program-think.blogspot.com/2012/02/microblog-and-time-management.html" target="_blank" rel="noopener">这篇博文</a><i class="fa fa-external-link"></i></span>（需要翻墙），此处本蒟蒻就不更多赘述了）</p>
-<h3 id="后记"><span class="heading-link">后记</span></h3><p>希望各位大佬能够从本蒟蒻的博客里或多或少收获一些东西。如有不同意见/指正意见，欢迎提出。本蒟蒻深感荣幸之至。</p>
-<p>同时，也希望各位大佬能在本博客寻觅到属于自己的乐趣，玩的开心！</p>
-<p>じゃ、よろしくね。</p>
-<p>CodeMonkey01 (Github: <span class="external-link"><a href="https://github.com/ToadStudio/" target="_blank" rel="noopener">ToadStudio</a><i class="fa fa-external-link"></i></span>) 写于 2019年12月27日 于 <span class="external-link"><a href="https://www.google.com/maps/place/%E6%9F%8F%E6%9E%97/" target="_blank" rel="noopener">柏林</a><i class="fa fa-external-link"></i></span></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span></div></nav></div></div><aside class="sidebar" id="sidebar"><div class="sidebar-inner"><section class="sidebar-toc hide"></section><!-- ov = overview --><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://i.ibb.co/qgFZ0Nt/12-02-sq.png" alt="avatar"></div><p class="sidebar-ov-author__p">CodeMonkey01</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social__item" href="https://github.com/ToadStudio/" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><i class="sidebar-ov-social__item--icon fa fa-github"></i></a><a class="sidebar-ov-social__item" href="https://twitter.com/codemonkeyeins" target="_blank" rel="noopener" data-popover="Twitter" data-popover-pos="up"><i class="sidebar-ov-social__item--icon fa fa-twitter"></i></a><a class="sidebar-ov-social__item" href="https://www.luogu.com.cn/user/75519" target="_blank" rel="noopener" data-popover="洛谷" data-popover-pos="up"><span class="sidebar-ov-social__item--logo">洛</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state__a posts" href="/archives/"><div class="sidebar-ov-state__a--count">3</div><div class="sidebar-ov-state__a--name">归档</div></a><a class="sidebar-ov-state__a categories" href="/categories/"><div class="sidebar-ov-state__a--count">2</div><div class="sidebar-ov-state__a--name">分类</div></a><a class="sidebar-ov-state__a tags" href="/tags/"><div class="sidebar-ov-state__a--count">2</div><div class="sidebar-ov-state__a--name">标签</div></a></div></section></div></aside><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>&copy; 2020</span><span> </span><span>CodeMonkey01 (ToadStudio).</span></div><div class="busuanzi"><span class="busuanzi-site_uv"><i class="fa fa-user"></i><span>访问人数 </span><span id="busuanzi_value_site_uv"></span></span><span class="separator">|</span><span class="busuanzi-site_pv"><i class="fa fa-eye"></i><span>浏览总量 </span><span id="busuanzi_value_site_pv"></span></span><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script></div><div><span>Hosted by <a href="https://pages.github.com/" rel="noopener" target="_blank">Github Pages</a><br>Theme edited by CodeMonkey01 (ToadStudio)<br><span>Theme Name 和泉紗霧の夏花火 (Izumi Sagiri no Natsu Hanabi)<span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="progress"></div></div><div class="back2top" id="back2top"><i class="back2top-icon fa fa-chevron-up"></i></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest.min.js" color="245,137,169" opacity="0.7" count="99" zIndex="-1"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="/js/utils.js?v=1.5.4"></script><script src="/js/stun-boot.js?v=1.5.4"></script><script src="/js/scroll.js?v=1.5.4"></script><script src="/js/header.js?v=1.5.4"></script><script src="/js/sidebar.js?v=1.5.4"></script></body></html>
+  var gitalk = new Gitalk({
+    id: md5(window.location.pathname.slice(1)),
+    clientID: 'e8b2067e291282d9fe6c',
+    clientSecret: '51db1e092142484c8856fe5ab28e8cef15208f17',
+    repo: 'blog-comment',
+    owner: 'ToadStudio',
+    admin: ['ToadStudio'],
+    distractionFreeMode: 'false',
+    language: 'zh-CN'
+  });
+
+  gitalk.render('gitalk-container');
+}
+
+if (false) {
+  loadGitalk();
+} else {
+  window.addEventListener('DOMContentLoaded', loadGitalk, false);
+}</script><script src="/js/utils.js?v=1.5.4"></script><script src="/js/stun-boot.js?v=1.5.4"></script><script src="/js/scroll.js?v=1.5.4"></script><script src="/js/header.js?v=1.5.4"></script><script src="/js/sidebar.js?v=1.5.4"></script></body></html>
