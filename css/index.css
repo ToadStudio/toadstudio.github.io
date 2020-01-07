@@ -1930,7 +1930,7 @@ post-tags-item,
 .post-header-meta-reading-count,
 .category-list-link:hover,
 .tagcloud-item > a:hover,
-paginator-post-next__a:hover,
+.paginator-post-next__a:hover,
 .paginator-post-prev__a:hover {
   color: #f589a9 !important;
 }
