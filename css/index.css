@@ -1915,10 +1915,12 @@ a:hover {
   color: #f589a9;
 }
 .sidebar-reading-line,
-.paginator .current {
+.paginator .current,
+.post-body-more__a:hover {
   background: #f589a9 !important;
 }
-.sidebar-ov-social__item {
+.sidebar-ov-social__item,
+.post-body-more__a {
   background: #71cbc6 !important;
 }
 .sidebar-toc .active > a,
