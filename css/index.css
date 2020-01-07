@@ -1899,8 +1899,10 @@ td {
 .post-tags-item > a,
 .single-category-name > span:last-child,
 .single-tag-name > span:last-child,
-category-list-link,
-tagcloud-item > a {
+.category-list-link,
+.tagcloud-item > a,
+.paginator-post-next__a,
+.paginator-post-prev__a {
   color: #71cbc6 !important;
 }
 a {
@@ -1927,7 +1929,9 @@ post-tags-item,
 .content .heading-link::after,
 .post-header-meta-reading-count,
 .category-list-link:hover,
-tagcloud-item > a:hover {
+.tagcloud-item > a:hover,
+paginator-post-next__a:hover,
+.paginator-post-prev__a:hover {
   color: #f589a9 !important;
 }
 .sidebar-nav .current {
