@@ -1474,6 +1474,9 @@ td {
 .post-header-title .external-link i {
   font-size: 0.7em;
 }
+a.fancybox {
+  cursor: zoom-in;
+}
 .zoom-image-mask {
   position: fixed;
   top: 0;
